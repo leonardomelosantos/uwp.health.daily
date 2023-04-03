@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/HealthDaily/.vs/HealthDaily/v16
+/HealthDaily/HealthDaily.Domain.Entities/bin/x86/Debug
+/HealthDaily/HealthDaily.Domain.Entities/obj
+/HealthDaily/HealthDaily.Domain.Services/bin/x86/Debug
+/HealthDaily/HealthDaily.Domain.Services/obj
+/HealthDaily/HealthDaily.Domain.Services.Impl/bin/x86/Debug
+/HealthDaily/HealthDaily.Domain.Services.Impl/obj
+/HealthDaily/HealthDaily.Main/bin/x86/Debug
+/HealthDaily/HealthDaily.Main/obj
+/HealthDaily/HealthDaily.Domain/obj
+/HealthDaily/HealthDaily.Domain/bin/x86/Debug
+/HealthDaily/.vs
