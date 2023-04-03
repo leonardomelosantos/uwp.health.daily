@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="HealthDaily.Main.Views.MenuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HealthDaily.Main.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="using:Prism.Windows.Mvvm" 
+    xmlns:controls="using:HealthDaily.Main.Controls"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid>
+        <StackPanel Orientation="Vertical">
+
+            <controls:MenuButton Click="{x:Bind ViewModel.NavigateToDashboard}"
+                                 Content="Home"
+                                 ImageDefault="ms-appx:///Assets/Menu/shealth_ic_menu_home_normal.png"
+                                 ImageSelected="ms-appx:///Assets/Menu/shealth_ic_menu_home_select.png"
+                                 GroupName="MenuItems"
+                                 IsChecked="{x:Bind ViewModel.IsSelected('Dashboard', ViewModel.CurrentPage), Mode=OneWay}"
+                                 />
+
+            <controls:MenuButton Click="{x:Bind ViewModel.NavigateToFoodCalendar}"
+                                 Content="Food calendar"
+                                 ImageDefault="ms-appx:///Assets/Menu/shealth_ic_menu_monitoring_normal.png"
+                                 ImageSelected="ms-appx:///Assets/Menu/shealth_ic_menu_monitoring_select.png"
+                                 GroupName="MenuItems"
+                                 IsChecked="{x:Bind ViewModel.IsSelected('FoodCalendar', ViewModel.CurrentPage), Mode=OneWay}"/>
+
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

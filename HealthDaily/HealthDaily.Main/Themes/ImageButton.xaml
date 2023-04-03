@@ -1,0 +1,77 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:HealthDaily.Main.Controls">
+    
+    <Style TargetType="controls:ImageButton">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:ImageButton">
+                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" 
+                                      BackgroundSizing="{TemplateBinding BackgroundSizing}" 
+                                      Background="{TemplateBinding Background}" 
+                                      BorderThickness="{TemplateBinding BorderThickness}" 
+                                      BorderBrush="{TemplateBinding BorderBrush}" 
+                                      ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                      CornerRadius="{TemplateBinding CornerRadius}" 
+                                      ContentTransitions="{TemplateBinding ContentTransitions}" 
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                      Padding="{TemplateBinding Padding}" 
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      Width="24">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <PointerUpThemeAnimation Storyboard.TargetName="ContentPresenter"/>
+                                    </Storyboard>
+                                    <VisualState.Setters>
+                                        <Setter Target="ImageStateNormal.Opacity" Value="1" />
+                                        <Setter Target="ImageStateHover.Opacity" Value="0" />
+                                        <Setter Target="ImageStateSelected.Opacity" Value="0" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <PointerUpThemeAnimation Storyboard.TargetName="ContentPresenter"/>
+                                    </Storyboard>
+                                    <VisualState.Setters>
+                                        <Setter Target="ImageStateNormal.Opacity" Value="0" />
+                                        <Setter Target="ImageStateHover.Opacity" Value="1" />
+                                        <Setter Target="ImageStateSelected.Opacity" Value="0" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <PointerDownThemeAnimation Storyboard.TargetName="ContentPresenter"/>
+                                    </Storyboard>
+                                    <VisualState.Setters>
+                                        <Setter Target="ImageStateNormal.Opacity" Value="0" />
+                                        <Setter Target="ImageStateHover.Opacity" Value="0" />
+                                        <Setter Target="ImageStateSelected.Opacity" Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid>
+                            <Image Source="{TemplateBinding DefaultImageSource}" 
+                                   x:Name="ImageStateNormal" 
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
+                            <Image Source="{TemplateBinding HoverImageSource}" 
+                                   x:Name="ImageStateHover" 
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                   Opacity="0" />
+                            <Image Source="{TemplateBinding PressedImageSource}" 
+                                   x:Name="ImageStateSelected" 
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                   Opacity="0" />
+                        </Grid>
+                    </ContentPresenter>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

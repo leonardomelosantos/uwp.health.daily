@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="CardColor" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="GrayBackground" Color="#E6E6E6" />
+    <SolidColorBrush x:Key="GrayBorderCheckbox" Color="#AAAAAA" />
+    <SolidColorBrush x:Key="ColorMain" Color="#91CB53" Opacity="1" />
+    <SolidColorBrush x:Key="ColorMainHover" Color="#91CB53" Opacity=".8" />
+    <SolidColorBrush x:Key="ColorTextDetailsDefault" Color="#363636" />
+    <SolidColorBrush x:Key="ColorRemoveAction" Color="DarkRed" />
+
+</ResourceDictionary>
